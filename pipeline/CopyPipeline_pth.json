@@ -1,0 +1,109 @@
+{
+	"name": "CopyPipeline_pth",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_pth",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "adfcookbooksav2synapsefs/data/planes.csv"
+					},
+					{
+						"name": "Destination",
+						"value": "dbo.Planes"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings",
+							"skipLineCount": 0
+						}
+					},
+					"sink": {
+						"type": "SqlDWSink",
+						"writeBehavior": "Insert",
+						"sqlWriterUseTableLock": false
+					},
+					"enableStaging": false,
+					"validateDataConsistency": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Name",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Name",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "IATA code",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "IATA_code",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ICAO code",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ICAO_code",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_pth",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_pth",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}

@@ -1,0 +1,38 @@
+{
+	"name": "SourceDataset_pth",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "planes.csv",
+				"folderPath": "data",
+				"container": "adfcookbooksav2synapsefs"
+			},
+			"columnDelimiter": ";",
+			"rowDelimiter": "\n",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Name",
+				"type": "String"
+			},
+			{
+				"name": "IATA code",
+				"type": "String"
+			},
+			{
+				"name": "ICAO code",
+				"type": "String"
+			}
+		]
+	}
+}
