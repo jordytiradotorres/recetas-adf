@@ -1,0 +1,42 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "ADFcookbookJob-Jordy"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_password": {
+			"value": ""
+		},
+		"AzureSynapseAnalytics1_password": {
+			"value": ""
+		},
+		"LSOrchestrationAzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"value": "sqlservercookbook.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"value": "AzureSQLDatabase"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"value": "admincookbook"
+		},
+		"AzureSynapseAnalytics1_properties_typeProperties_server": {
+			"value": "adfcookbookv2synapse.sql.azuresynapse.net"
+		},
+		"AzureSynapseAnalytics1_properties_typeProperties_database": {
+			"value": "adfcookbookv2sqlpool"
+		},
+		"AzureSynapseAnalytics1_properties_typeProperties_userName": {
+			"value": "sqladminuser"
+		},
+		"trigger_blob_added_properties_typeProperties_scope": {
+			"value": "/subscriptions/72cce2c1-5a6e-4e8d-8de3-eb4f3feb033e/resourceGroups/ADFcookbook/providers/Microsoft.Storage/storageAccounts/adforchestrationstorage"
+		}
+	}
+}
