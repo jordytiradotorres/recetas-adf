@@ -1,0 +1,9 @@
+{
+	"name": "ADFcookbookJob-Jordy",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "2ec7c9d0-7b32-4cbc-8f1d-91021c4ef90f",
+		"tenantId": "61b746ea-6363-4ca4-883d-b99ca950363b"
+	}
+}
