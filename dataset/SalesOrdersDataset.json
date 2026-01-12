@@ -11,8 +11,7 @@
 			"location": {
 				"type": "AzureBlobStorageLocation",
 				"fileName": "SalesOrders.txt",
-				"folderPath": "input",
-				"container": "adfcookbook"
+				"container": "input"
 			}
 		}
 	},

@@ -10,8 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"folderPath": "output",
-				"container": "adfcookbook"
+				"fileName": "SalesOrders.txt",
+				"container": "output"
 			}
 		}
 	},
