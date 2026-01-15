@@ -15,7 +15,7 @@
 		"typeProperties": {
 			"blobPathBeginsWith": "/data/blobs/",
 			"ignoreEmptyBlobs": true,
-			"scope": "/subscriptions/72cce2c1-5a6e-4e8d-8de3-eb4f3feb033e/resourceGroups/ADFcookbook/providers/Microsoft.Storage/storageAccounts/adforchestrationstorage",
+			"scope": "/subscriptions/05af71b4-6ced-4a0f-b132-2a3c3ad05989/resourceGroups/ADFcookbook/providers/Microsoft.Storage/storageAccounts/adforchestrationsa",
 			"events": [
 				"Microsoft.Storage.BlobCreated"
 			]
