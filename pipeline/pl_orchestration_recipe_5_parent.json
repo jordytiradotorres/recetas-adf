@@ -54,7 +54,7 @@
 						"referenceName": "CsvData",
 						"type": "DatasetReference",
 						"parameters": {
-							"filename": "airlines.csv"
+							"filename": "noexiste"
 						}
 					}
 				],

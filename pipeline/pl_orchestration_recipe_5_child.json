@@ -66,7 +66,11 @@
 								"headers": {
 									"Content-Type": "application/json"
 								},
-								"url": "https://prod-25.eastus.logic.azure.com:443/workflows/2e99d61a49184f1494182b1c909a7063/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=oODF8J1NY2oZ5iY1l0UjKZq9FwkmnnuotqK0AXL0oPo",
+								"url": "https://prod-65.eastus.logic.azure.com:443/workflows/515beb0c2c254b8da4a6c70d979f0d3a/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=HGwJ2pHE-x9QJDwiZUFsTbiddzR7wGDbf0gB23Uq4S4",
+								"connectVia": {
+									"referenceName": "AutoResolveIntegrationRuntime",
+									"type": "IntegrationRuntimeReference"
+								},
 								"body": {
 									"value": "@json(concat('{\"emailAddress\": \"', item().emailAddress,\n'\", \"subject\": \"ADF Pipeline Failure\", \"messageBody\": \"ADF\nPipeline Failed\"}'))",
 									"type": "Expression"
