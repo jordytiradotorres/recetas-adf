@@ -1,0 +1,33 @@
+{
+	"name": "ch3-5-pipeline",
+	"properties": {
+		"activities": [
+			{
+				"name": "Web1",
+				"type": "WebActivity",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"method": "POST",
+					"url": "https://management.azure.com/subscriptions/05af71b4-6ced-4a0f-b132-2a3c3ad05989/resourceGroups/adfcookbookv2/providers/Microsoft.Synapse/workspaces/adfcookbookv2synapse/sqlPools/adfcookbookv2sqlpool/resume?apiversion= 2021-06-01",
+					"connectVia": {
+						"referenceName": "AutoResolveIntegrationRuntime",
+						"type": "IntegrationRuntimeReference"
+					},
+					"authentication": {
+						"type": "MSI",
+						"resource": "https://management.core.windows.net"
+					}
+				}
+			}
+		],
+		"annotations": []
+	}
+}
