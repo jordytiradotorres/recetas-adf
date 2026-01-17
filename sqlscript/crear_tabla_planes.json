@@ -1,5 +1,5 @@
 {
-	"name": "SQL script 1",
+	"name": "crear_tabla_planes",
 	"properties": {
 		"content": {
 			"query": "CREATE TABLE [dbo].[Planes]\n(\n  [Name] varchar(100) NOT NULL,\n  [IATA_code] varchar(10) NULL,\n  [ICAO_code] varchar(10) NULL  \n)\nGO\n",

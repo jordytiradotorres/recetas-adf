@@ -1,0 +1,17 @@
+{
+	"name": "crear_tabla_customer",
+	"properties": {
+		"content": {
+			"query": "CREATE TABLE [dbo].[Customer]\n(\n[CustomerKey] [int] NOT NULL,\n[CustomerID] [int] NOT NULL,\n[Customer] [nvarchar](100) NOT NULL,\n[BillToCustomer] [nvarchar](100) NOT NULL,\n[Category] [nvarchar](50) NOT NULL,\n[BuyingGroup] [nvarchar](50) NOT NULL,\n[PrimaryContact] [nvarchar](50) NOT NULL,\n[PostalCode] [nvarchar](10) NOT NULL,\n[ValidFrom] [datetime2](7) NOT NULL,\n[ValidTo] [datetime2](7) NOT NULL,\n[LineageKey] [int] NOT NULL)\nWITH\n(\nDISTRIBUTION = ROUND_ROBIN, -- Distribuye los datos uniformemente entre todos los nodos de procesamiento\n-- Cada fila se asigna a un nodo diferente de forma cíclica\nCLUSTERED COLUMNSTORE INDEX) -- almacena los datos en forma columnstore, en columna y no por filas\nGO",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "adfcookbookv2sqlpool",
+				"poolName": "adfcookbookv2sqlpool"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
